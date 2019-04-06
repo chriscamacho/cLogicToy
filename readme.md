@@ -3,7 +3,7 @@ cLogicToy
 
 a simple toy for grid based logic circuits
 
-click on any cell to edit it
+click on any cell to edit it, 
 right click on an input cell to toggle it on or off
 
 there are a small number of example circuits that can be loaded
