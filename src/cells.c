@@ -5,7 +5,7 @@
 int doLogic = 0;
 
 // images used to draw inside cells
-GdkPixbuf* cellImages[13];
+GdkPixbuf* cellImages[c_total_number_images];
 
 cellStruct *cells[gridWidth * gridHeight];
 
@@ -134,27 +134,11 @@ void clearGrid()
         }
     }
 }
-/*
-    c_And = 0,
-    c_In = 1,
-    c_Or = 2,
-    c_Xor = 3,
-    c_Cross = 5,
-    c_Not = 6,
-    c_Out = 7,
-    c_Wire = 10,
 
-    <tile>
-        <pos x="1" y="3" />
-        <type logic="In" />
-        <outputs north="false" east="true" south="false" west="false" />
-        <inputs north="false" east="false" south="false" west="false" />
-    </tile>
-    */
 void cellAsXml(cellStruct* c, char* cellStr)
 {
     const char* tf[] = {"false", "true"};
-    const char* lt[] = {"And", "In", "Or", "Xor", "", "Cross", "Not", "Out", "", "", "Wire"};
+    const char* lt[] = {"And", "In", "Or", "Xor", "Cross", "Not", "Out", "Wire"};
     char p1[32];
     char p2[32];
     char p3[160];

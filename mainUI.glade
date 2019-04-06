@@ -28,19 +28,19 @@
       </row>
       <row>
         <col id="0" translatable="yes">BRIDGE</col>
-        <col id="1" translatable="yes">5</col>
+        <col id="1" translatable="yes">4</col>
       </row>
       <row>
         <col id="0" translatable="yes">NOT</col>
-        <col id="1" translatable="yes">6</col>
+        <col id="1" translatable="yes">5</col>
       </row>
       <row>
         <col id="0" translatable="yes">OUT</col>
-        <col id="1" translatable="yes">7</col>
+        <col id="1" translatable="yes">6</col>
       </row>
       <row>
         <col id="0" translatable="yes">WIRE</col>
-        <col id="1" translatable="yes">10</col>
+        <col id="1" translatable="yes">7</col>
       </row>
       <row>
         <col id="0" translatable="yes">EMPTY</col>

@@ -4,31 +4,32 @@
 #include <gtk/gtk.h>
 #include "clist.h"
 
-// {"And.png", "In.png", "Or.png", "Xor.png", "on.png",
-//        "Cross.png", "Not.png", "Out.png", "inwire.png", "outwire.png"};
-
 #define gridWidth 32
 #define gridHeight 32
 
 extern int doLogic;
 
+// NB if these change the list model in glade will need changing
+// also check strings in cellAsXml()
+// TODO look at manually creating the model from these enums...
 enum cellType {
-    c_And = 0,
-    c_In = 1,
-    c_Or = 2,
-    c_Xor = 3,
-    c_On = 4, // not an actual type, done for pixmap index
-    c_Cross = 5,
-    c_Not = 6,
-    c_Out = 7,
-    c_inWire = 8, // not an actual type, done for pixmap index
-    c_outWire = 9, // not an actual type, done for pixmap index
-    c_Wire = 10, // just a connection
-    c_BG = 11,
-    c_Lon = 12, // not an actual type, done for pixmap index
+    c_And = 0,      // 2 inputs 1 output
+    c_In,           // 1 output
+    c_Or,           // 2 inputs 1 output
+    c_Xor,          // 2 inputs 1 output
+    c_Cross,        // 2 inputs 2 outputs
+    c_Not,          // 1 input  1 output
+    c_Out,          // 1 input
+    c_Wire,         // 1 input  1-3 outputs
+
+    c_BG,           // not an actual type, done for pixmap index
+    c_inWire,       // not an actual type, done for pixmap index
+    c_outWire,      // not an actual type, done for pixmap index
+    c_On,           // not an actual type, done for pixmap index
+    c_Lon,          // not an actual type, done for pixmap index
+    c_total_number_images,
     c_Empty = 255
 };
-
 
 typedef struct {
     int x, y;
@@ -48,7 +49,7 @@ typedef struct {
 } cellTarget;
 
 
-extern GdkPixbuf* cellImages[13];
+extern GdkPixbuf* cellImages[c_total_number_images];
 extern cellStruct *cells[gridWidth * gridHeight];
 
 void freeTargets(cellStruct* c);
