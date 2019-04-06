@@ -1,0 +1,331 @@
+<grid>
+    <tile>
+        <pos x="2" y="1" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="3" y="1" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="4" y="1" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="1" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="1" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="1" />
+        <type logic="Wire" />
+        <outputs north="false" east="false" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="1" y="2" />
+        <type logic="In" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="2" />
+        <type logic="Wire" />
+        <outputs north="true" east="false" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="2" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="2" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="2" />
+        <type logic="And" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="8" y="2" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="3" />
+        <type logic="Wire" />
+        <outputs north="false" east="false" south="true" west="false" />
+        <inputs north="true" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="3" />
+        <type logic="Wire" />
+        <outputs north="true" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="4" />
+        <type logic="Wire" />
+        <outputs north="false" east="false" south="true" west="false" />
+        <inputs north="true" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="4" y="4" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="4" />
+        <type logic="Cross" />
+        <outputs north="true" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="4" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="4" />
+        <type logic="Not" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="8" y="4" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="5" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="3" y="5" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="4" y="5" />
+        <type logic="Wire" />
+        <outputs north="true" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="5" />
+        <type logic="Cross" />
+        <outputs north="true" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="5" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="5" />
+        <type logic="Wire" />
+        <outputs north="false" east="false" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="6" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="3" y="6" />
+        <type logic="Cross" />
+        <outputs north="false" east="true" south="true" west="false" />
+        <inputs north="true" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="4" y="6" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="6" />
+        <type logic="Wire" />
+        <outputs north="true" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="6" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="6" />
+        <type logic="Or" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="8" y="6" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="1" y="7" />
+        <type logic="In" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="7" />
+        <type logic="Wire" />
+        <outputs north="true" east="false" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="3" y="7" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="4" y="7" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="7" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="7" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="7" />
+        <type logic="Wire" />
+        <outputs north="false" east="false" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="8" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="3" y="8" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="4" y="8" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="8" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="8" />
+        <type logic="Wire" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="8" />
+        <type logic="Xor" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="8" y="8" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+</grid>

@@ -1,0 +1,73 @@
+<grid>
+
+    <tile>
+        <pos x="2" y="1" />
+        <type logic="In" />
+        <outputs north="false" east="false" south="true" west="false" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="1" y="2" />
+        <type logic="In" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="2" />
+        <type logic="Cross" />
+        <outputs north="false" east="true" south="true" west="false" />
+        <inputs north="true" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="3" y="2" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="true" />
+    </tile>
+
+    <tile>
+        <pos x="2" y="3" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="true" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="4" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="5" y="5" />
+        <type logic="Out" />
+        <outputs north="false" east="false" south="false" west="false" />
+        <inputs north="false" east="true" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="5" />
+        <type logic="Cross" />
+        <outputs north="true" east="false" south="false" west="true" />
+        <inputs north="false" east="true" south="true" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="7" y="5" />
+        <type logic="In" />
+        <outputs north="false" east="false" south="false" west="true" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+
+    <tile>
+        <pos x="6" y="6" />
+        <type logic="In" />
+        <outputs north="true" east="false" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+
+</grid>
