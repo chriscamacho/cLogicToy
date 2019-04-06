@@ -1,7 +1,7 @@
 cLogicToy
 =========
 
-![adder 3+1=4](chriscamacho.github.com/cLogicToy/adder.png)
+![adder 3+1=4](adder.png)
 
 a simple toy for grid based logic circuits
 
