@@ -22,6 +22,68 @@ gboolean timeOut(gpointer data)
     return TRUE;
 }
 
+gboolean on_fileSave_activate(GtkWidget *widget, gpointer data)
+{
+    (void)widget;
+    (void)data;
+    
+    GtkWidget *dialog;
+GtkFileChooser *chooser;
+GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SAVE;
+gint res;
+
+dialog = gtk_file_chooser_dialog_new ("Save File",
+                                      (GtkWindow*)data,
+                                      action,
+                                      "_Cancel",
+                                      GTK_RESPONSE_CANCEL,
+                                      "_Save",
+                                      GTK_RESPONSE_ACCEPT,
+                                      NULL);
+chooser = GTK_FILE_CHOOSER (dialog);
+
+gtk_file_chooser_set_do_overwrite_confirmation (chooser, TRUE);
+
+
+  gtk_file_chooser_set_current_name (chooser,
+                                     "./examples/*");
+
+res = gtk_dialog_run (GTK_DIALOG (dialog));
+if (res == GTK_RESPONSE_ACCEPT)
+  {
+    char *filename;
+
+    filename = gtk_file_chooser_get_filename (chooser);
+    
+       FILE * fp;
+
+   fp = fopen (filename, "w");
+
+   fprintf(fp,"<grid>\n\n");
+
+    char str[1024];
+    for(int y=0; y<gridHeight; y++) {
+        for(int x=0; x<gridWidth; x++) {
+            cellStruct* c = cells[x + (y * gridWidth)];
+            if (c->type!=c_Empty) {
+                cellAsXml(c, str);
+                fprintf(fp,"%s",str);
+            }
+        }
+    }
+    fprintf(fp,"\n</grid>\n");
+   fclose(fp);
+
+    g_free (filename);
+  }
+
+gtk_widget_destroy (dialog);
+    
+    
+    
+
+    return FALSE;
+}
 
 gboolean fileNew_activate_cb(GtkWidget *widget, gpointer data)
 {

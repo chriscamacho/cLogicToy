@@ -134,3 +134,35 @@ void clearGrid()
         }
     }
 }
+/*
+    c_And = 0,
+    c_In = 1,
+    c_Or = 2,
+    c_Xor = 3,
+    c_Cross = 5,
+    c_Not = 6,
+    c_Out = 7,
+    c_Wire = 10,
+    
+    <tile>
+        <pos x="1" y="3" />
+        <type logic="In" />
+        <outputs north="false" east="true" south="false" west="false" />
+        <inputs north="false" east="false" south="false" west="false" />
+    </tile>
+    */
+void cellAsXml(cellStruct* c, char* cellStr) {
+    const char* tf[]={"false","true"};
+    const char* lt[]={"And","In","Or","Xor","","Cross","Not","Out","","","Wire"};
+    char p1[32];
+    char p2[32];
+    char p3[160];
+    char p4[160];
+    sprintf(p1,"<tile>\n\t<pos x=\"%i\" y=\"%i\" />\n",c->x,c->y);
+    sprintf(p2,"\t<type logic=\"%s\" />\n",lt[c->type]);
+    sprintf(p3,"\t<outputs north=\"%s\" east=\"%s\" south=\"%s\" west=\"%s\" />\n",
+        tf[c->outputs[0]],tf[c->outputs[1]],tf[c->outputs[2]],tf[c->outputs[3]]);
+    sprintf(p4,"\t<inputs north=\"%s\" east=\"%s\" south=\"%s\" west=\"%s\" />\n</tile>\n\n",
+        tf[c->inputs[0]],tf[c->inputs[1]],tf[c->inputs[2]],tf[c->inputs[3]]);
+    sprintf(cellStr,"%s%s%s%s",p1,p2,p3,p4);
+}

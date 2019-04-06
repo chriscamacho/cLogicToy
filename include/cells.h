@@ -32,11 +32,11 @@ enum cellType {
 typedef struct {
     int x, y;
     enum cellType type;
-    char inputs[4];
-    char inputStates[4];
-    char outputs[4];
+    int inputs[4];
+    int inputStates[4];
+    int outputs[4];
     clist_t* targets;
-    char activated;
+    int activated;
     GtkWidget *drawArea;
 } cellStruct;
 
@@ -53,5 +53,6 @@ extern cellStruct *cells[gridWidth * gridHeight];
 void freeTargets(cellStruct* c);
 void clearGrid();
 void stepLogic();
+void cellAsXml(cellStruct* c, char* cellStr);
 
 #endif // CELL_H

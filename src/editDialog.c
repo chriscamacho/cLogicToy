@@ -2,6 +2,7 @@
 #include "callbacks.h"
 #include "wires.h"
 
+
 GtkWidget* editDialog;
 GtkWidget* edTypeDD;
 GtkWidget* edOkButton;
@@ -113,6 +114,7 @@ gboolean edOkButtonClicked(GtkWidget* widget, gpointer data)
     findWires();
     doLogic = 1;
     gtk_widget_hide(editDialog);
+
     return FALSE;
 }
 
@@ -122,6 +124,7 @@ gboolean edCancelButton_clicked_cb(GtkWidget* widget, gpointer data)
     (void)data;
     //printf("cancel clicked\n");
     gtk_widget_hide(editDialog);
+    doLogic = 1;
     return FALSE;
 }
 
