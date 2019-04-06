@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
     cellImages[c_inWire] = loadCellImage("img/inwire.png");
     cellImages[c_outWire] = loadCellImage("img/outwire.png");
     cellImages[c_BG] = loadCellImage("img/bg.png");
+    cellImages[c_Lon] = loadCellImage("img/lon.png");
 
     // for now the graphics icons are at a fixed 64x64 size
     gtk_widget_set_size_request (grid, 64 * gridWidth, 64 * gridHeight);

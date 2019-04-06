@@ -25,6 +25,7 @@ enum cellType {
     c_outWire = 9, // not an actual type, done for pixmap index
     c_Wire = 10, // just a connection
     c_BG = 11,
+    c_Lon = 12, // not an actual type, done for pixmap index
     c_Empty = 255
 };
 
@@ -47,7 +48,7 @@ typedef struct {
 } cellTarget;
 
 
-extern GdkPixbuf* cellImages[10];
+extern GdkPixbuf* cellImages[13];
 extern cellStruct *cells[gridWidth * gridHeight];
 
 void freeTargets(cellStruct* c);

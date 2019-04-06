@@ -222,7 +222,7 @@ void validateCell()
             strcpy(errStr, "exactly 1 output is needed\0");
         }
     }
-    
+
     if (edCell->type == c_In) {
         if (i != 0) {
             valid = 0;
@@ -233,7 +233,7 @@ void validateCell()
             strcpy(errStr, "exactly 1 output is needed\0");
         }
     }
-    
+
     if (edCell->type == c_Not) {
         if (i != 1) {
             valid = 0;
@@ -242,9 +242,9 @@ void validateCell()
         if (o != 1) {
             valid = 0;
             strcpy(errStr, "exactly 1 output is needed\0");
-        }        
+        }
     }
-    
+
     if (edCell->type == c_Out) {
         if (i != 1) {
             valid = 0;
@@ -255,7 +255,7 @@ void validateCell()
             strcpy(errStr, "exactly 0 outputs are needed\0");
         }
     }
-    
+
     if (edCell->type == c_Cross) {
         if (i != 2) {
             valid = 0;
@@ -265,24 +265,24 @@ void validateCell()
             valid = 0;
             strcpy(errStr, "exactly 2 outputs are needed\0");
         }
-        int vi=0;
-        int vo=0;
-        vi=edCell->inputs[0]+edCell->inputs[2];
-        vo=edCell->outputs[0]+edCell->outputs[2];
-        if (vi!=1 && vo!=1) {
+        int vi = 0;
+        int vo = 0;
+        vi = edCell->inputs[0] + edCell->inputs[2];
+        vo = edCell->outputs[0] + edCell->outputs[2];
+        if (vi != 1 && vo != 1) {
             valid = 0;
             strcpy(errStr, "vertical wire needs exactly 1 input and output\0");
         }
-        int hi=0;
-        int ho=0;
-        hi=edCell->inputs[3]+edCell->inputs[1];
-        ho=edCell->outputs[1]+edCell->outputs[3];
-        if (hi!=1 && ho!=1) {
+        int hi = 0;
+        int ho = 0;
+        hi = edCell->inputs[3] + edCell->inputs[1];
+        ho = edCell->outputs[1] + edCell->outputs[3];
+        if (hi != 1 && ho != 1) {
             valid = 0;
             strcpy(errStr, "horizontal wire needs exactly 1 input and output\0");
         }
     }
-    
+
     if (edCell->type == c_Wire) {
         if (i != 1) {
             valid = 0;
@@ -291,7 +291,7 @@ void validateCell()
         if (o == 0) {
             valid = 0;
             strcpy(errStr, "more than 1 output is needed\0");
-        }        
+        }
     }
 
     if (valid) {
