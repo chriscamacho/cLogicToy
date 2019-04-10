@@ -118,6 +118,7 @@ void findWires()
                     c->type == c_Not) {
                 //printf("------------------\n");
                 //printf("wire source[%i,%i]\n", c->x, c->y);
+                c->inputStates[0] = c->inputStates[1] = c->inputStates[2] = c->inputStates[3] = 0;
                 freeTargets(c);
                 findTargets(c, c);
             }

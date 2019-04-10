@@ -8,7 +8,8 @@
 GdkPixbuf* loadCellImage(const char* fn)
 {
     GError *gerror = NULL;
-    GdkPixbuf* pb = gdk_pixbuf_new_from_file (fn, &gerror);
+    //GdkPixbuf* pb = gdk_pixbuf_new_from_file (fn, &gerror);
+    GdkPixbuf* pb = gdk_pixbuf_new_from_resource (fn, &gerror);
 
     if (!pb) {
         printf("error message: %s\n", gerror->message);
@@ -27,7 +28,9 @@ int main(int argc, char *argv[])
     gtk_init(&argc, &argv);
 
     builder = gtk_builder_new();
-    gtk_builder_add_from_file (builder, "mainUI.glade", NULL);
+    #define PREFIX "/uk/co/bedroomcoders/cLogicToy/"
+    //gtk_builder_add_from_file (builder, "mainUI.glade", NULL);
+    gtk_builder_add_from_resource(builder, PREFIX"res/mainUI.glade", NULL);
 
     window = GTK_WIDGET(gtk_builder_get_object(builder, "mainWindow"));
     grid = GTK_WIDGET(gtk_builder_get_object(builder, "grid"));
@@ -37,18 +40,18 @@ int main(int argc, char *argv[])
 
     g_object_unref(builder);
 
-    cellImages[c_And] = loadCellImage("img/And.png");
-    cellImages[c_In] = loadCellImage("img/In.png");
-    cellImages[c_Or] = loadCellImage("img/Or.png");
-    cellImages[c_Xor] = loadCellImage("img/Xor.png");
-    cellImages[c_On] = loadCellImage("img/on.png");
-    cellImages[c_Cross] = loadCellImage("img/Cross.png");
-    cellImages[c_Not] = loadCellImage("img/Not.png");
-    cellImages[c_Out] = loadCellImage("img/Out.png");
-    cellImages[c_inWire] = loadCellImage("img/inwire.png");
-    cellImages[c_outWire] = loadCellImage("img/outwire.png");
-    cellImages[c_BG] = loadCellImage("img/bg.png");
-    cellImages[c_Lon] = loadCellImage("img/lon.png");
+    cellImages[c_And] = loadCellImage(PREFIX"img/And.png");
+    cellImages[c_In] = loadCellImage(PREFIX"img/In.png");
+    cellImages[c_Or] = loadCellImage(PREFIX"img/Or.png");
+    cellImages[c_Xor] = loadCellImage(PREFIX"img/Xor.png");
+    cellImages[c_On] = loadCellImage(PREFIX"img/on.png");
+    cellImages[c_Cross] = loadCellImage(PREFIX"img/Cross.png");
+    cellImages[c_Not] = loadCellImage(PREFIX"img/Not.png");
+    cellImages[c_Out] = loadCellImage(PREFIX"img/Out.png");
+    cellImages[c_inWire] = loadCellImage(PREFIX"img/inwire.png");
+    cellImages[c_outWire] = loadCellImage(PREFIX"img/outwire.png");
+    cellImages[c_BG] = loadCellImage(PREFIX"img/bg.png");
+    cellImages[c_Lon] = loadCellImage(PREFIX"img/lon.png");
 
     // for now the graphics icons are at a fixed 64x64 size
     gtk_widget_set_size_request (grid, 64 * gridWidth, 64 * gridHeight);

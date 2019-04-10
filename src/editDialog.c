@@ -111,6 +111,7 @@ gboolean edOkButtonClicked(GtkWidget* widget, gpointer data)
         dest->outputs[d] = edCell->outputs[d];
     }
     dest->type = edCell->type;
+    dest->activated = 0;
     findWires();
     doLogic = 1;
     gtk_widget_hide(editDialog);
